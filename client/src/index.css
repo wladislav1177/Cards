@@ -11,3 +11,139 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+
+/* Главная страница */
+.header, .container {
+  text-align: center;
+}
+
+.container {
+  display: flex;
+}
+
+.previous-page, .next-page, .cards {
+  margin: auto;
+}
+
+
+/* Кнопки предыдущая/следующая страница */
+.btn-previous-page, .btn-next-page {
+  width: 70px;
+  height: 25px;
+  border: none;
+  background-color: white;
+  font-size: 70px;
+  cursor: pointer;
+}
+
+.btn-previous-page:focus, .btn-next-page:focus {
+  outline: none;
+}
+
+
+/* Карточки */
+.card-block {
+  width: 200px;
+  height: 300px;
+  display: inline-block; 
+  border: 1px solid gainsboro;
+  border-radius: 15px;
+  background-color: cornsilk; 
+  margin: 10px;
+  cursor: pointer;
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.avatar-img {
+  width: 150px;
+  height: 150px;
+}
+
+
+
+
+/* Страница с полной карточкой */
+.wrapper-cp {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.container-cp {
+  width: 500px;
+  height: 600px;
+  position: absolute;
+  top: 100px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  background-color: cornsilk;
+  border: 1px solid gainsboro;
+  border-radius: 15px;
+}
+
+
+/* Кнопка назад */
+.btn-back {
+  margin-left: 15px;
+  border: none;
+  background-color: cornsilk;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.btn-back:focus {
+  outline: none;
+}
+
+
+/* Блок header */
+.block-header-cp {
+  display: flex;
+  height: 200px;
+}
+
+.avatar-cp {
+  width: 200px;
+  height: 200px;
+  margin-left: 25px;
+}
+
+.avatar-img-cp {
+  width: 200px;
+  height: 200px;
+}
+
+.block-name-cp {
+  width: 240px;
+  height: 150px;
+  padding-top: 50px;
+  padding-left: 30px; 
+}
+
+.first-name-cp, .last-name-cp {
+  font-size: 20px;
+}
+
+
+/* Блок body */
+.block-body-cp {
+  display: flex;
+}
+
+.body-left-cp, .body-right-cp {
+  margin-top: 20px;
+  margin-left: 30px;
+}
