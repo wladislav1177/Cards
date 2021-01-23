@@ -32,7 +32,6 @@ function RenderCard() {
       )
   }, [])
 
-
   // Рендер
   if (error) {
     return <div>Ошибка: {error.message}</div>;
@@ -42,13 +41,13 @@ function RenderCard() {
     return (
       <table className="table-cards">
         {items.map(item => (
-          <td className="td-cards" key={item.id.$oid}>
-            <div className="card-block" onClick={''}>
+          <td className="td-cards">
+            <div className="card-block" id={item.id.$oid} onClick={ClickOnCard}>
               <div className="avatar">
-                <img className="avatar-img" src={item.avatar} alt="avatar"></img>
+                <img className="avatar-img" id={item.id.$oid} src={item.avatar} alt="avatar"></img>
               </div>
-              <p className="first-name">{item.first_name}</p>
-              <p className="last-name">{item.last_name}</p>
+              <p className="first-name" id={item.id.$oid} >{item.first_name}</p>
+              <p className="last-name" id={item.id.$oid} >{item.last_name}</p>
             </div>
           </td>
         ))}
@@ -57,12 +56,13 @@ function RenderCard() {
   }
 }
 
-
-// Кнопка вперёд
-function NextPage () {
-  const search = window.location.search;
-  //<Route path= component={HomePage} />
+// Нажатие на карточку
+function ClickOnCard(e) {
+  const personID = e.target.id;
+  const url = `/card/${personID}`;
+  window.location.href = url;
 }
+
 
 // Рендер главной страницы
 function HomePage() {
@@ -82,7 +82,7 @@ function HomePage() {
         </div>
   
         <div className="next-page">
-          <button className="btn-next-page" onClick={NextPage}>&#129046;</button>
+          <button className="btn-next-page" onClick={''}>&#129046;</button>
         </div>
       </div>    
     </div>

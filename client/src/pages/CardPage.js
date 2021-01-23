@@ -1,13 +1,7 @@
 import React, { useState,  useEffect } from 'react';
-import { useHistory } from 'react-router-dom'; 
-
 
 // Кнопка назад
-function BtnBack() {
-    const history = useHistory();
-    history.push('/');
-}
-
+function BtnBack() { window.location.href = "/" }
 
 // Рендер страницы с полной карточкой
 function RenderCardPage() {
@@ -47,7 +41,7 @@ function RenderCardPage() {
             <div className="wrapper-cp">
                 <div className="container-cp">
                     <div>
-                        <button className="btn-back" onClick={''}>&#8592;</button>
+                        <button className="btn-back" onClick={BtnBack}>&#8592;</button>
                     </div>
 
                     <div className="block-header-cp">

@@ -6,10 +6,6 @@ const people = require('./data/MOCK_DATA.json');
 const app = express();
 app.listen(5000, () => console.log('Server has been started...'));
 
-// Поиск в массиве people
-//console.log(people.find(item => item.id.$oid == '6001a4b0fc13ae31df00088a'));
-
-
 //Запрос с HomePage
 app.get('/', function(req, res) {
     res.setHeader('Access-Control-Allow-Origin', '*');
