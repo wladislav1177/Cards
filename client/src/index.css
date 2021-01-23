@@ -23,8 +23,21 @@ code {
   display: flex;
 }
 
-.previous-page, .next-page, .cards {
+.previous-page, .next-page {
   margin: auto;
+}
+
+
+/* Блок с карточками */
+.cards {
+  margin: auto;
+  width: 75%;
+}
+
+.table-cards, .td-cards {
+  display: block;
+  box-sizing: border-box;
+  float: left;
 }
 
 

@@ -11,7 +11,10 @@ function App() {
         <Route path="/" exact>
           <HomePage />
         </Route>
-        <Route path="/card">
+        <Route path="/?page=n">
+          <HomePage />
+        </Route>
+        <Route path="/card/:id">
           <CardPage />
         </Route>
         <Redirect to="/" />
