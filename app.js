@@ -13,11 +13,13 @@ app.get('/', function(req, res) {
 
     const page = req.query.page;
     const limit = 12;
+    const numberOfPages = Math.ceil(people.length / limit);
 
     const startIndex = (page - 1) * limit;
     const endIndex = page * limit;
     const resultPeople = people.slice(startIndex, endIndex);
-    res.send(resultPeople);
+    
+    res.json({resultPeople, page, numberOfPages});
 });
 
 //Запрос с CardPage
